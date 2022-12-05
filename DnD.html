@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Creation</title>
+    <link href="DnD.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>D&D Character Creator</h1>
+<form>
+    <label for="name">Character Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="class">Class:</label><br>
+    <select id="class" name="class">
+        <option value="barbarian">Barbarian</option>
+        <option value="bard">Bard</option>
+        <option value="cleric">Cleric</option>
+        <option value="druid">Druid</option>
+        ...
+    </select><br>
+    <label for="race">Race:</label><br>
+    <select id="race" name="race">
+        <option value="human">Human</option>
+        <option value="elf">Elf</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="halfling">Halfling</option>
+        ...
+    </select><br>
+    <label for="alignment">Alignment:</label><br>
+    <select id="alignment" name="alignment">
+        <option value="lawful good">Lawful Good</option>
+        <option value="neutral good">Neutral Good</option>
+        <option value="chaotic good">Chaotic Good</option>
+        <option value="lawful neutral">Lawful Neutral</option>
+        ...
+    </select><br>
+</form>
+<p id="character-summary"></p>
+<script src="script.js"></script>
+
+</body>
+</html>

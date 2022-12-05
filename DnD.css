@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
