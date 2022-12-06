@@ -10,6 +10,7 @@ h1 {
 }
 
 form {
+    background-color: cornflowerblue;
     max-width: 500px;
     margin: auto;
     padding: 1em;
@@ -28,3 +29,33 @@ input, select {
     box-sizing: border-box;
 }
 
+
+
+/*<!-- CSS for styling the character creator form -->*/
+
+ form {
+     width: 50%;
+     margin: 0 auto;
+     text-align: center;
+ }
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    margin: 5px;
+}
+
+#attributes {
+    height: 8em;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+#characterSummary{
+    width: 37.5em;
+    height: 5em;
+}
