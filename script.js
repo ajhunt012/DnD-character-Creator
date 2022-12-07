@@ -36,3 +36,8 @@ function rollDice() {
         "Wisdom: " + wisdom + "<br>" +
         "Charisma: " + charisma;
 }
+
+
+
+
+

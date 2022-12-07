@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+"use strict";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -130,7 +131,7 @@
 <section>
     <table>
         <tr>
-            <th colspan="3">Skills</th>
+            <th colspan="3">Skills list</th>
         </tr>
         <tr>
             <td>Acrobatics</td>
@@ -152,15 +153,129 @@
             <td id="athleticsModifier"></td>
             <td id="athleticsProficiency"></td>
         </tr>
-        ...
+
         <tr>
+            <td>Deception</td>
+            <td id="deceptionModifier"></td>
+            <td id="deceptionProficiency"></td>
+        </tr>
+        <tr>
+            <td>History</td>
+            <td id="historyModifier"></td>
+            <td id="historyProficiency"></td>
+        </tr>
+        <tr>
+            <td>Insight</td>
+            <td id="insightModifier"></td>
+            <td id="insightProficiency"></td>
+        </tr>
+        <tr>
+            <td>Intimidation</td>
+            <td id="intimidationModifier"></td>
+            <td id="intimidationProficiency"></td>
+        </tr>
+        <tr>
+            <td>Investigation</td>
+            <td id="investigationModifier"></td>
+            <td id="investigationProficiency"></td>
+        </tr>
+        <tr>
+            <td>Medicine</td>
+            <td id="medicineModifier"></td>
+            <td id="medicineProficiency"></td>
+        </tr>
+        <tr>
+            <td>Nature</td>
+            <td id="natureModifier"></td>
+            <td id="natureProficiency"></td>
+        </tr>
+        <tr>
+            <td>Perception</td>
+            <td id="perceptionModifier"></td>
+            <td id="perceptionProficiency"></td>
+        </tr>
+        <tr>
+            <td>Performance</td>
+            <td id="performanceModifier"></td>
+            <td id="performanceProficiency"></td>
+        </tr>
+        <tr>
+            <td>Persuasion</td>
+            <td id="persuasionModifier"></td>
+            <td id="persuasionProficiency"></td>
+        </tr>
+        <tr>
+            <td>Religion</td>
+            <td id="religionModifier"></td>
+            <td id="religionProficiency"></td>
+        </tr>
+        <tr>
+            <td>Sleight of Hand</td>
+            <td id="sleightOfHandModifier"></td>
+            <td id="sleightOfHandProficiency"></td>
+        </tr>
+        <tr>
+            <td>Stealth</td>
+            <td id="stealthModifier"></td>
+            <td id="stealthProficiency"></td>
+        </tr><tr>
             <td>Survival</td>
             <td id="survivalModifier"></td>
             <td id="survivalProficiency"></td>
         </tr>
+
+
     </table>
 
+
 </section>
+
+<h1>Dice Roller</h1>
+<p>Enter the number of dice you want to roll:</p>
+<input type="number" id="num-dice">
+<p>Select the number of sides on the dice:</p>
+<select id="num-sides">
+    <option value="20">20</option>
+    <option value="12">12</option>
+    <option value="8">8</option>
+    <option value="6">6</option>
+    <option value="4">4</option>
+</select>
+<button onclick="rollDice2()">Roll Dice</button>
+<p>Results:</p>
+<p id="results"></p>
+<script>
+    function rollDice2() {
+        // Get the number of dice to roll from the input field
+        var numDice = document.getElementById("num-dice").value;
+
+        // Get the number of sides on the dice from the dropdown menu
+        var numSides = document.getElementById("num-sides").value;
+
+        // Initialize an empty array to store the results of each die roll
+        var rollResults2 = [];
+
+        // Loop over the number of dice and roll each one
+        for (var i = 0; i < numDice; i++) {
+            // Generate a random number between 1 and the number of sides on the dice
+            var roll = Math.floor(Math.random() * numSides) + 1;
+
+            // Add the result of this roll to the array
+            rollResults2.push(roll);
+        }
+
+        // Calculate the sum of the dice rolls
+        var sum = 0;
+        for (var i = 0; i < rollResults2.length; i++) {
+            sum += rollResults2[i];
+        }
+
+        // Display the results in the "results" element
+        var resultsElement = document.getElementById("results");
+        resultsElement.innerHTML = "Rolled " + numDice + " dice: " + rollResults2.join(", ") + "<br>Total: " + sum;
+    }
+</script>
+
 
 
 <script src="script.js"></script>

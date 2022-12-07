@@ -34,7 +34,7 @@ input, select {
 /*<!-- CSS for styling the character creator form -->*/
 
  form {
-     width: 50%;
+     width: 60%;
      margin: 0 auto;
      text-align: center;
  }
@@ -56,6 +56,7 @@ input, select, button {
 }
 
 #characterSummary{
-    width: 37.5em;
+    /*width: 37.5em;*/
     height: 5em;
+    column-span: 2;
 }
